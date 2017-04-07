@@ -80,7 +80,6 @@ function gh_exam_customize_register( $wp_customize ) {
 	));
 
 	$wp_customize->add_setting( 'display_first_section' , array(
-		'default'	=>	false,
 		'transport' => 'postMessage'
 	) );
 	$wp_customize->add_control(new WP_Customize_Control($wp_customize,'display_first_section' , array(
@@ -382,9 +381,28 @@ add_action( 'customize_register', 'gh_exam_customize_register' );
 
 /********************/
 
-function gh_exam_customizer_action() {
+function gh_exam_customizer_action() {?>
 
-	?>
+	<style>
+		.first.section{
+			display: <?php if (get_theme_mod('display_first_section')===true) echo 'none';?>
+		}
+		.secong.section{
+			display: <?php if (get_theme_mod('display_second_section')===true) echo 'none';?>
+		}
+		.third.section{
+			display: <?php if (get_theme_mod('display_third_section')===true) echo 'none';?>
+		}
+		.fourth.section{
+			display: <?php if (get_theme_mod('display_fourth_section')===true) echo 'none';?>
+		}
+		.fifth.section{
+			display: <?php if (get_theme_mod('display_fifth_section')===true) echo 'none';?>
+		}
+		.sixth.section{
+			display: <?php if (get_theme_mod('display_sixth_section')===true) echo 'none';?>
+		}
+	</style>
 	<script>
 		jQuery(function ($) {
 			$('.slider').slick({

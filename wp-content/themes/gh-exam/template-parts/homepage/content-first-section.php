@@ -7,7 +7,7 @@
 
 ?>
 
-<section id="" class="section">
+<section id="first_section" class="first section">
     <div class="container">
         <div class="row">
             <?php if (get_theme_mod('first_section_title') || get_theme_mod('first_section_subtitle') ) : ?>

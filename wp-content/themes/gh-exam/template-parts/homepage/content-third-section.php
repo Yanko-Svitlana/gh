@@ -1,8 +1,12 @@
 <?php
 /**
- * Template part for displaying second section in homepage
+ * Template part for displaying third section in homepage
  *
  * @package BusinessPlus
  */
 
 ?>
+
+<section id="third_section" class="third section">
+    
+</section>

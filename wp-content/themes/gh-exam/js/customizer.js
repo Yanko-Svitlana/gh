@@ -39,4 +39,36 @@
 			}
 		} );
 	} );
+
+	//Displaying sections on homepage
+	wp.customize( 'display_first_section', function( value ) {
+		value.bind( function( to ) {
+			false === to ? $( '#first_section' ).show() : $( '#first_section' ).hide();
+		} );
+	} );
+	wp.customize( 'display_second_section', function( value ) {
+		value.bind( function( to ) {
+			false === to ? $( '#second_section' ).show() : $( '#second_section' ).hide();
+		} );
+	} );
+	wp.customize( 'display_third_section', function( value ) {
+		value.bind( function( to ) {
+			false === to ? $( '#third_section' ).show() : $( '#third_section' ).hide();
+		} );
+	} );
+	wp.customize( 'display_fourth_section', function( value ) {
+		value.bind( function( to ) {
+			false === to ? $( '#fourth_section' ).show() : $( '#fourth_section' ).hide();
+		} );
+	} );
+	wp.customize( 'display_fifth_section', function( value ) {
+		value.bind( function( to ) {
+			false === to ? $( '#fifth_section' ).show() : $( '#fifth_section' ).hide();
+		} );
+	} );
+	wp.customize( 'display_sixth_section', function( value ) {
+		value.bind( function( to ) {
+			false === to ? $( '#sixth_section' ).show() : $( '#sixth_section' ).hide();
+		} );
+	} );
 } )( jQuery );

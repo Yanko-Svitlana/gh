@@ -7,7 +7,7 @@
 
 ?>
 
-<section id="" class="section">
+<section id="second_section" class="second section">
     <div class="container">
         <?php if (get_theme_mod('second_section_title') || get_theme_mod('econd_section_subtitle') ) : ?>
             <div class="section-header">
