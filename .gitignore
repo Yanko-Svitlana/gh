@@ -1,4 +1,3 @@
-
 # Created by https://www.gitignore.io/api/bower,windows,macos,phpstorm,node
 
 ### Bower ###
@@ -158,11 +157,9 @@ gulpfile.js
 # -----------------------------------------------------------------
 
 # ignore everything in the root except the "wp-content" directory.
-wp-admin/*
-wp-includes/*
-*.*
+*
 !wp-content/
-!gh_exam.sql
+!exam.sql
 
 
 # ignore all files starting with .
@@ -175,7 +172,7 @@ wp-includes/*
 !.editorconfig
 
 # track readme.md in the root (i.e. do NOT ignore it)
-!readme.md
+readme.md
 
 # ignore all files that start with ~
 ~*
@@ -200,22 +197,19 @@ Thumbs.db
 # "themes" directory
 wp-content/plugins/*
 wp-content/uploads/*
-wp-content/upgrade/*
-wp-content/themes/gh-exam/bower_components/
-wp-content/themes/gh-exam/node_modules/
-!wp-content/themes/gh-exam/
+!wp-content/themes/gh-exam/*
 
 # ignore these plugins from the core
-wp-content/plugins/hello.php
-wp-content/plugins/akismet/
+
 
 # ignore style folder
 
-gh-exam/wp-content/themes/style
+wp-content/themes/gh-exam/style/
 
 
 # Other
-
+wp-content/themes/gh-exam/bower_components/
+wp-content/themes/gh-exam/node_modules/
 
 
 
