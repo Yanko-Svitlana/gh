@@ -200,8 +200,10 @@ Thumbs.db
 # "themes" directory
 wp-content/plugins/*
 wp-content/uploads/*
-wp-content/ipgrade/*
-!wp-content/themes/gh-exam
+wp-content/upgrade/*
+wp-content/themes/gh-exam/bower_components/
+wp-content/themes/gh-exam/node_modules/
+!wp-content/themes/gh-exam/
 
 # ignore these plugins from the core
 wp-content/plugins/hello.php
