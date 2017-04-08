@@ -38,8 +38,8 @@ function gh_exam_setup() {
 	//Add custom logo
 
 	add_theme_support( 'custom-logo',array(
-		'height'	=> '100',
-		'width'		=>'100'
+		'height'	=> '63',
+		'width'		=>'129'
 	) );
 
 	/*
@@ -109,13 +109,43 @@ function gh_exam_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => esc_html__( 'Footer widget', 'gh-exam' ),
-		'id'            => 'footer-widget',
+		'name'          => esc_html__( 'Footer map', 'gh-exam' ),
+		'id'            => 'footer-map',
 		'description'   => esc_html__( 'Add widgets here.', 'gh-exam' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h3 class="footer-title">',
-		'after_title'   => '</h3>',
+		'before_title'  => '<h2 class="footer-map">',
+		'after_title'   => '</h2>',
+	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Contact form', 'gh-exam' ),
+		'id'            => 'contact-form',
+		'description'   => esc_html__( 'Add widgets here.', 'gh-exam' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="contact-form">',
+		'after_title'   => '</h2>',
+	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Search', 'gh-exam' ),
+		'id'            => 'search',
+		'description'   => esc_html__( 'Add widgets here.', 'gh-exam' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="search">',
+		'after_title'   => '</h2>',
+	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Newsletter', 'gh-exam' ),
+		'id'            => 'newsletter',
+		'description'   => esc_html__( 'Add widgets here.', 'gh-exam' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="newsletter">',
+		'after_title'   => '</h2>',
 	) );
 }
 add_action( 'widgets_init', 'gh_exam_widgets_init' );
@@ -124,11 +154,7 @@ add_action( 'widgets_init', 'gh_exam_widgets_init' );
  * Enqueue scripts and styles.
  */
 function gh_exam_scripts() {
-	wp_enqueue_style( 'gh-exam-open-sans', '//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
-
-	wp_enqueue_style( 'gh-exam-raleway', '//fonts.googleapis.com/css?family=Raleway:400,500,600,700,800');
-
-	wp_enqueue_style( 'gh-exam-lora', '//fonts.googleapis.com/css?family=Lora:400,400i');
+	wp_enqueue_style( 'gh-exam-roboto', '//fonts.googleapis.com/css?family=Roboto:400,500,700\');');
 
 	wp_enqueue_style( 'reset', get_template_directory_uri(). '/libs/reset.css');
 
@@ -150,6 +176,7 @@ function gh_exam_scripts() {
 	wp_enqueue_script( 'custom-js', get_template_directory_uri() . '/vendor/js/jquery.js', array(),'', true);
 	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/vendor/js/bootstrap.min.js', array(),'', true);
 	wp_enqueue_script( 'slick', get_template_directory_uri() . '/vendor/js/slick.js', array(), '', true);
+	wp_enqueue_script( 'isotope', get_template_directory_uri() . '/vendor/js/isotope.pkgd.js', array(), '', true);
 	wp_enqueue_script( 'gh-exam-main-js', get_template_directory_uri().'/js/main.js', array(), '', true);
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

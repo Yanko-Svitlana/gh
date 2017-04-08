@@ -57,7 +57,7 @@
 					'menu_id' => 'primary-menu'
 				) ); ?>
 			</nav><!-- #site-navigation -->
-			<?php get_search_form();?>
+
 		</div><!--.container-->
 	</header><!-- #masthead -->
 

@@ -11,20 +11,30 @@
 
 ?>
 
-	</div><!-- #content -->
-<?php dynamic_sidebar('footer-widget')?>
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="container">
-			<div class="site-info">
-				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'gh-exam' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'gh-exam' ), 'WordPress' ); ?></a>
-				<span class="sep"> | </span>
-				<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'gh-exam' ), 'gh-exam', '<a href="https://automattic.com/" rel="designer">Yanko Svitlana</a>' ); ?>
-			</div><!-- .site-info -->
+</div><!-- #content -->
+
+<footer id="colophon" class="site-footer" role="contentinfo">
+	<div class="container">
+		<div class="row">
+			<div class="">
+				<h2 class="footer-title"><?php the_custom_logo('custom-logo')?></h2>
+				<span class="copyright">
+						&copy;
+					<?php echo get_theme_mod('copyrights-year');?>
+					<?php echo get_theme_mod('copyrights')?>
+				</span>
+			</div>
+
+			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-5">
+				<?php dynamic_sidebar('footer-form');?>
+			</div>
 		</div>
-	</footer><!-- #colophon -->
+	</div>
+</footer><!-- #colophon -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
 
 </body>
 </html>
+

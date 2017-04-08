@@ -38,6 +38,19 @@ function gh_exam_customize_register( $wp_customize ) {
 		'panel'		=>'home_page_panel'
 	));
 
+	$wp_customize->add_setting('first_section_image', array(
+		'transport'	=>	'postMessage'
+	));
+
+	$wp_customize->add_control(
+		new WP_Customize_Image_Control( $wp_customize,'first_section_image',array(
+				'label'      => __( 'Upload an image', 'gh-exam' ),
+				'section'    => 'first_section',
+				'settings'   => 'first_section_image'
+			)
+		)
+	);
+
 	$wp_customize->add_setting('first_section_title',array(
 		'transport'	=>'postMessage'
 	));
@@ -54,6 +67,22 @@ function gh_exam_customize_register( $wp_customize ) {
 		'label'		=>	esc_html__('Enter subtitle of first section', 'gh-exam')
 	));
 
+	$wp_customize->add_setting('first_section_span1',array(
+		'transport'	=>	'postMessage'
+	));
+	$wp_customize->add_control('first_section_span1',array(
+		'section'	=>	'first_section',
+		'label'		=>	esc_html__('Some info', 'gh-exam')
+	));
+
+	$wp_customize->add_setting('first_section_span2',array(
+		'transport'	=>	'postMessage'
+	));
+	$wp_customize->add_control('first_section_span2',array(
+		'section'	=>	'first_section',
+		'label'		=>	esc_html__('Some info', 'gh-exam')
+	));
+
 	$wp_customize->add_setting('first_section_description',array(
 		'transport'	=>	'postMessage'
 	));
@@ -63,7 +92,7 @@ function gh_exam_customize_register( $wp_customize ) {
 		'type'		=>	'textarea'
 	));
 
-	$wp_customize->add_setting('first_section_btn_text',array(
+	/*$wp_customize->add_setting('first_section_btn_text',array(
 		'transport'	=>	'postMessage'
 	));
 	$wp_customize->add_control('first_section_btn_text',array(
@@ -77,7 +106,7 @@ function gh_exam_customize_register( $wp_customize ) {
 		'section'	=> 'first_section',
 		'label' 	=> esc_html__('Choose page to link', 'gh-exam'),
 		'type'     	=> 'dropdown-pages'
-	));
+	));*/
 
 	$wp_customize->add_setting( 'display_first_section' , array(
 		'transport' => 'postMessage'
@@ -97,6 +126,19 @@ function gh_exam_customize_register( $wp_customize ) {
 		'panel'		=>'home_page_panel'
 	));
 
+	$wp_customize->add_setting('second_section_image', array(
+		'transport'	=>	'postMessage'
+	));
+
+	$wp_customize->add_control(
+		new WP_Customize_Image_Control( $wp_customize,'second_section_image',array(
+				'label'      => __( 'Upload an image', 'gh-exam' ),
+				'section'    => 'second_section',
+				'settings'   => 'second_section_image'
+			)
+		)
+	);
+
 	$wp_customize->add_setting('second_section_title',array(
 		'transport'	=>'postMessage'
 	));
@@ -105,14 +147,15 @@ function gh_exam_customize_register( $wp_customize ) {
 		'label'		=>	esc_html__('Enter title of second section', 'gh-exam')
 	));
 
-	$wp_customize->add_setting('second_section_subtitle',array(
+	$wp_customize->add_setting('second_section_description',array(
 		'transport'	=>'postMessage'
 	));
-	$wp_customize->add_control('second_section_subtitle',array(
+	$wp_customize->add_control('second_section_description',array(
 		'section'	=>	'second_section',
-		'label'		=>	esc_html__('Enter subtitle of second section', 'gh-exam')
+		'label'		=>	esc_html__('Enter description of second section', 'gh-exam'),
+		'type'		=>	'textarea'
 	));
-
+/*
 	$wp_customize->add_setting('second_section_btn_text',array(
 		'transport'	=>	'postMessage'
 	));
@@ -127,7 +170,7 @@ function gh_exam_customize_register( $wp_customize ) {
 		'section'	=> 'second_section',
 		'label' 	=> esc_html__('Choose page to link', 'gh-exam'),
 		'type'     	=> 'dropdown-pages'
-	));
+	));*/
 
 	$wp_customize->add_setting( 'display_second_section' , array(
 		'default'	=>	false,
@@ -199,7 +242,7 @@ function gh_exam_customize_register( $wp_customize ) {
 		'label'		=>	esc_html__('Fill subtitle of fourth section', 'gh-exam')
 	));
 
-	$wp_customize->add_setting('fourth_section_btn_text',array(
+	/*$wp_customize->add_setting('fourth_section_btn_text',array(
 		'transport'	=>	'postMessage'
 	));
 	$wp_customize->add_control('fourth_section_btn_text',array(
@@ -213,7 +256,7 @@ function gh_exam_customize_register( $wp_customize ) {
 		'section'	=> 'fourth_section',
 		'label' 	=> esc_html__('Choose page to link', 'gh-exam'),
 		'type'     	=> 'dropdown-pages'
-	));
+	));*/
 
 	$wp_customize->add_setting( 'display_fourth_section' , array(
 		'default'	=>	false,
@@ -269,6 +312,8 @@ function gh_exam_customize_register( $wp_customize ) {
 		'panel'		=>'home_page_panel'
 	));
 
+
+
 	$wp_customize->add_setting('sixth_section_title',array(
 		'transport'	=>'postMessage'
 	));
@@ -303,23 +348,52 @@ function gh_exam_customize_register( $wp_customize ) {
 		'priority'	=>35
 	));
 
+	$wp_customize->add_setting('contact_image', array(
+		'transport'	=>	'postMessage'
+	));
+
+	$wp_customize->add_control(
+		new WP_Customize_Image_Control( $wp_customize,'contact_image',array(
+				'label'      => __( 'Upload an image', 'gh-exam' ),
+				'section'    => 'contact_info',
+				'settings'   => 'contact_image'
+			)
+		)
+	);
+	$wp_customize->add_setting('contact_title',array(
+		'transport'	=>'postMessage'
+	));
+	$wp_customize->add_control('contact_title',array(
+		'section'	=>	'contact_info',
+		'label'		=>	esc_html__('Fill title of contacts', 'gh-exam')
+	));
+
+	$wp_customize->add_setting('contact_description',array(
+		'transport'	=>'postMessage'
+	));
+	$wp_customize->add_control('contact_description',array(
+		'section'	=>	'contact_info',
+		'label'		=>	esc_html__('Fill description of contacts', 'gh-exam'),
+		'type'		=>	'textarea'
+	));
+
 	$wp_customize->add_setting('phone-number',array(
 		'transport'	=>'postMessage'
 	));
 
 	$wp_customize->add_control('phone-number',array(
-		'section'	=>	'contact-info',
+		'section'	=>	'contact_info',
 		'label'		=>	esc_html__('Fill your contact phone number', 'gh-exam')
 	));
 
-	$wp_customize->add_setting('email',array(
+	/*$wp_customize->add_setting('email',array(
 		'transport'	=>	'postMessage'
 	));
 
 	$wp_customize->add_control('email',array(
 		'label'		=>	esc_html__('Fill your contact email','gh-exam'),
 		'section'	=>	'contact_info',
-	));
+	));*/
 
 	$wp_customize->add_setting('address',array(
 		'transport'	=>	'postMessage'
@@ -329,6 +403,26 @@ function gh_exam_customize_register( $wp_customize ) {
 		'section'	=>	'contact_info',
 	));
 
+	/*------------------------------------
+     Blog page
+     ------------------------------------*/
+	$wp_customize->add_section('blog_page',array(
+		'title'		=> esc_html__('Bog page','gh-exam'),
+		'priority'	=>35
+	));
+
+	$wp_customize->add_setting('blog_image', array(
+		'transport'	=>	'postMessage'
+	));
+
+	$wp_customize->add_control(
+		new WP_Customize_Image_Control( $wp_customize,'blog_image',array(
+				'label'      => __( 'Upload an image', 'gh-exam' ),
+				'section'    => 'blog_page',
+				'settings'   => 'blog_image'
+			)
+		)
+	);
 	/*------------------------------------
      Social links
 	------------------------------------*/
@@ -402,27 +496,22 @@ function gh_exam_customizer_action() {?>
 		.sixth.section{
 			display: <?php if (get_theme_mod('display_sixth_section')===true) echo 'none';?>
 		}
+
+		.sixth.section{
+			background: <?php if (get_theme_mod('contact_image')):?>
+						url(<?php echo get_theme_mod('contact_image')?>) center/cover no-repeat;
+						<?php else: echo'#fff;';
+						 endif;?>
+		}
+
+		.blog .page-title, .single .page-title {
+			background: <?php if (get_theme_mod('blog_image')):?>
+				url(<?php echo get_theme_mod('blog_image');?>) center/cover no-repeat;
+		<?php else: echo 'rgba(0, 0, 0, 0.8);';
+         endif;?>
+		}
+
 	</style>
-	<script>
-		jQuery(function ($) {
-			$('.slider').slick({
-				dots: true,
-				arrows: false,
-				cssEase: 'ease-in',
-				slidesToShow: 1,
-				autoplay: true,
-				<?php if (get_theme_mod('fade_slide_options')==='slide') { ?>
-
-				SlideToScroll: 1,
-
-				<?php }  else  {?>
-				fade: true,
-				<?php } ?>
-				speed: 500
-			});
-		});
-	</script>
-
 
 
 <?php }

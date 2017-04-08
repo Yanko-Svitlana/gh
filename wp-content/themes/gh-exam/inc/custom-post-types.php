@@ -6,7 +6,7 @@
  */
 
 function create_post_type() {
-    $arr_post = array( 'Slides', 'Features' );
+    $arr_post = array( 'Features','Portfolio','Clients' );
     for ( $i=0; $i<count( $arr_post ); $i++ ) {
         register_post_type( $arr_post[$i],
             array(
@@ -17,7 +17,7 @@ function create_post_type() {
                 ),
                 'public' => true,
                 'menu position'=> 2,
-                'has_archive' => false,
+                'has_archive' => true,
                 'show_ui' => true,
                 'taxonomies' => array( 'category', 'post_tag' ),
                 'supports' => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'custom-fields' ),
