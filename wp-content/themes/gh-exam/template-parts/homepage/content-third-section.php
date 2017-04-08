@@ -30,8 +30,7 @@
                     <li class="features-item">
                         <div class="feature-icon"><?php the_post_thumbnail()?></div>
                         <div class="feature-content">
-                            <h3 class="feature-item-title">
-                                <a href="<?php echo get_permalink();?>"><?php the_title();?></a></h3>
+                            <h3 class="feature-item-title"><?php the_title();?></h3>
                             <p><?php the_content()?></p>
                         </div>
                     </li>

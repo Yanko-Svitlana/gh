@@ -51,10 +51,17 @@ function gh_exam_customize_register( $wp_customize ) {
 		)
 	);
 
-	$wp_customize->add_setting('first_section_title',array(
+	$wp_customize->add_setting('first_section_title-first_word',array(
 		'transport'	=>'postMessage'
 	));
-	$wp_customize->add_control('first_section_title',array(
+	$wp_customize->add_control('first_section_title-first_word',array(
+		'section'	=>	'first_section',
+		'label'		=>	esc_html__('Enter title of first section', 'gh-exam')
+	));
+	$wp_customize->add_setting('first_section_title-second_word',array(
+		'transport'	=>'postMessage'
+	));
+	$wp_customize->add_control('first_section_title-second_word',array(
 		'section'	=>	'first_section',
 		'label'		=>	esc_html__('Enter title of first section', 'gh-exam')
 	));

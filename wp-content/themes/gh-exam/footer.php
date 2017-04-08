@@ -14,8 +14,12 @@
 </div><!-- #content -->
 
 <footer id="colophon" class="site-footer" role="contentinfo">
-	<div class="container">
-		<div class="row">
+
+			<?php
+			get_template_part( 'template-parts/homepage/content', 'fifth-section' );
+			
+			get_template_part( 'template-parts/homepage/content', 'sixth-section' );
+			?>
 			<div class="">
 				<h2 class="footer-title"><?php the_custom_logo('custom-logo')?></h2>
 				<span class="copyright">
@@ -28,9 +32,7 @@
 			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-5">
 				<?php dynamic_sidebar('footer-form');?>
 			</div>
-		</div>
-	</div>
-</footer><!-- #colophon -->
+	</footer><!-- #colophon -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

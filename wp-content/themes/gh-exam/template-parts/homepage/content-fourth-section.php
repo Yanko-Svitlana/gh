@@ -26,7 +26,7 @@
         if ($query->have_posts()) :?>
             <div id="options">
                 <div id="filters" class="button-group js-radio-button-group">
-                    <button class="btn-isotope button is-checked" data-filter="*">View all</button>
+                    <button class="btn-isotope button is-checked" data-filter="*"><?php echo esc_html__('All','gh-exam')?></button>
                     <button class="btn-isotope button" data-filter=".design"><?php echo esc_html__('Design','gh-exam')?></button>
                     <button class="btn-isotope button" data-filter=".development"><?php echo esc_html__('Development','gh-exam')?></button>
                     <button class="btn-isotope button" data-filter=".seo"><?php echo esc_html__('Seo','gh-exam')?></button>
@@ -39,7 +39,7 @@
                     <div class="item <?php echo get_post_meta($post->ID,'category',true)?>">
                         <div class="feature-icon"><?php the_post_thumbnail()?></div>
                         <div class="overlay-rect">
-                            <h3 class="heaing-overlay"><?php echo get_post_meta($post->ID,'category',true);?></h3>
+                            <h3 class="heading-overlay"><?php echo get_post_meta($post->ID,'category',true);?></h3>
                         </div>
                     </div>
                 <?php endwhile;?>

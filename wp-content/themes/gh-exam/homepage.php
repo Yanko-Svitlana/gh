@@ -13,8 +13,4 @@ get_template_part( 'template-parts/content', 'social-links' );
     get_template_part( 'template-parts/homepage/content', 'third-section' );
     //fourth section 
     get_template_part( 'template-parts/homepage/content', 'fourth-section' );
-    //fifth section 
-    get_template_part( 'template-parts/homepage/content', 'fifth-section' );
-    //sixth section
-    get_template_part( 'template-parts/homepage/content', 'sixth-section' );
 get_footer();
